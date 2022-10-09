@@ -55,12 +55,10 @@
 		<py-script output="time">
 			from datetime import datetime
 			now = datetime.now()
-			pyscript.write("time","目前日期时间：" + now.strftime("%m/%d/%y, %h:%m:%s"))
+			pyscript.write("time", now.strftime("%m/%d/%y, %h:%m:%s"))
 			<!-- list1 = list("pythony在网页中执行")
 			for i in list1:
 				print("{}".format(i)) -->
-
-
 		</py-script>
 		<py-repl auto-generate="true"></py-repl>
 		<h1>show.html</h1>
