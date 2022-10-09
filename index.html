@@ -15,6 +15,7 @@
 		packages = ["pandas","numpy","matplotlib"]
 	</py-config>
 	<body>
+		<div id="time"></div>
     <div id="mpl"></div>
 		<py-script output="mpl">
 			import pandas as pd
@@ -50,18 +51,14 @@
 			ax1.set_title('tripcolor of Delaunay triangulation, flat shading')
 			pyscript.write("mpl",fig1)
 
-
-
-
+		</py-script>
+		<py-script output="time">
 			from datetime import datetime
 			now = datetime.now()
-			print("目前日期时间", now.strftime("%m/%d/%y, %h:%m:%s"))
-			list1 = list("pythony在网页中执行")
+			pyscript.write("time","目前日期时间：" + now.strftime("%m/%d/%y, %h:%m:%s"))
+			<!-- list1 = list("pythony在网页中执行")
 			for i in list1:
-				print("{}".format(i))
-
-
-
+				print("{}".format(i)) -->
 
 
 		</py-script>
